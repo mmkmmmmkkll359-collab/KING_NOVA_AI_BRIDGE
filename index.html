@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KING NOVA AI BRIDGE</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #0b1020;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 650px;
+      margin: 30px auto;
+      padding: 24px;
+      border: 1px solid #34446b;
+      border-radius: 20px;
+      background: #151d33;
+    }
+    h1 { color: #70e1ff; text-align: center; }
+    .subtitle { color: #b9c7e8; text-align: center; }
+    .status {
+      margin: 20px 0;
+      padding: 14px;
+      border-radius: 10px;
+      background: #202d49;
+      color: #91f7bb;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border: 0;
+      border-radius: 10px;
+      background: #43c7f4;
+      color: #07111f;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    textarea {
+      width: 100%;
+      min-height: 110px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #526486;
+      background: #0b1020;
+      color: white;
+      font-size: 16px;
+    }
+    .note { color: #c2cbe0; font-size: 14px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>👑 KING NOVA</h1>
+    <p class="subtitle">AI BRIDGE · ศูนย์ควบคุม AI ของคุณ</p>
+
+    <div class="status" id="status">
+      ● ระบบหน้าเว็บทำงานแล้ว
+    </div>
+
+    <h3>💬 พื้นที่ทดลองข้อความ</h3>
+    <textarea id="message" placeholder="พิมพ์ข้อความที่นี่..."></textarea>
+    <button onclick="showMessage()">ทดสอบระบบ</button>
+    <div class="status" id="result">ผลลัพธ์จะแสดงที่นี่</div>
+
+    <p class="note">
+      เวอร์ชันเริ่มต้น: หน้าเว็บนี้ยังไม่ได้เชื่อมต่อ ChatGPT
+      หรือ Gemini จริง การเชื่อมต่อ AI ต้องตั้งค่า API
+      ผ่านเซิร์ฟเวอร์ที่ปลอดภัยในขั้นต่อไป
+    </p>
+  </main>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message").value.trim();
+      const result = document.getElementById("result");
+
+      if (!message) {
+        result.textContent = "พิมพ์ข้อความก่อนนะ!";
+        return;
+      }
+
+      result.textContent = "ระบบรับข้อความแล้ว: " + message;
+    }
+  </script>
+</body>
+  </html>
